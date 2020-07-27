@@ -9,7 +9,6 @@ permalink: /store
 
 ### Tyemi
 [The supported library](./tyemiapp/index.html)
-[The offline version](./tyemiapp.txt)
 <br/>
 <br/>
 
