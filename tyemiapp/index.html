@@ -1030,7 +1030,6 @@ AElFTkSuQmCC">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
   $(function(){
-    $("#home").load("tyemiapp/home.html");
     $("#library").load("tyemiapp/library.html");
   });
 </script>
@@ -1050,8 +1049,15 @@ function list(){
     <button class="tablinks" onclick="openTab(event, 'library')"></button>
 </div>
 
-<div class="tabcontent" id="home" style="display: block; text-align: center;"></div>
+<div class="tabcontent" id="home" style="display: block; text-align: center;">
+  <h1>Tyemi</h1>
+  <h3>"It's pronounced tie-emee!"</h3>
+  <br/><br/>
+  <p>Use the Library to install PWAs.</p><br/><br/>
+</div>
+
 <div class="tabcontent" id="library"></div>
+
 </body>
 <!--------------------------------->
 </html>
