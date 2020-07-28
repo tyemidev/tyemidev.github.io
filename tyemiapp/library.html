@@ -1,9 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script>
+function list(){
+    var list = document.getElementById('list');
+    var close = document.getElementById('library');
+
+    listgen(list, 'test', cloase, 'neil');
+}
+</script>
 </head>
 
-<body>
+<body onload="list();">
+
+<div id="library">
+<div style="text-align: center;"><div style="display:inline-block">
+<input type="text" id="searchbar" onkeyup="search()" placeholder="Search..">
+</div></div>
+
+<ul id="list">
+</ul>
+</div>
+
+
 
 </body>
 </html>
