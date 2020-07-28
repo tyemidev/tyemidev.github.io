@@ -19,14 +19,11 @@ function listgen(ulid, display, switcheroffid, switcheronid){
     button.textContent = display;
 
     //attributes
-    button.setAttribute('onclick', 'test'+' nunu')
+    button.setAttribute('onclick', 'switcher("'+switcheroffid+'", "'+switcheronid+'");')
 
     //append
     li.appendChild(button);
     ul.appendChild(li);
-
-    //switcher
-    switcher(switcheroffid, switcheronid);
 }
 
 function switcher(close, open){
