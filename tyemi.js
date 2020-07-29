@@ -35,12 +35,12 @@ function appgen(id, name, description, link, offline){
     //create elements
     div = document.getElementById(id);
     h1 = document.createElement('h1');
-    br1 = document.createElement('br/');
+    br1 = document.createElement('br');
     h3 = document.createElement('h3');
-    br2 = document.createElement('br/');
-    br3 = document.createElement('br/');
+    br2 = document.createElement('br');
+    br3 = document.createElement('br');
     button1 = document.createElement('button');
-    br4 = document.createElement('br/');
+    br4 = document.createElement('br');
 
     if(offline){
     button2 = document.createElement('button');
