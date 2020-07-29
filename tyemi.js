@@ -55,11 +55,11 @@ function appgen(id, name, description, link, offline){
     }
 
     //attributes
-    button1.setAttribute('style', 'font-size:2vw; width:4vw;');
+    button1.setAttribute('style', 'font-size:1vw; width:100%vw;');
     button1.setAttribute('onclick', 'tyemiwindow("open", "'+link+'");');
 
     if(offline){
-    button2.setAttribute('style', 'font-size:2vw; width:4vw;');
+    button2.setAttribute('style', 'font-size:1vw; width:100%;');
     button2.setAttribute('onclick', 'tyemiwindow("open", "'+offline+'");');
     }
 
