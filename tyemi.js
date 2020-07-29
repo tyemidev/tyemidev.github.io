@@ -60,7 +60,7 @@ function appgen(id, name, description, link, offline){
 
     if(offline){
     button2.setAttribute('style', 'font-size:1vw;');
-    button2.setAttribute('onclick', 'tyemiwindow("open", "'+offline+'");');
+    button2.setAttribute('onclick', 'tyemiwindow("open_data", "'+offline+'");');
     }
 
     //append
@@ -89,5 +89,8 @@ function tyemiwindow(method, url){
         window.location.href = url;
     }else if(method == 'open'){
         window.open(url);
+    }else if(method == 'open_data'){
+        var win = window.open();
+        win.document.write('<iframe src="' + url  + '" frameborder="0" style="border:0; top:0px; left:0px; bottom:0px; right:0px; width:100%; height:100%;" allowfullscreen></iframe>');
     }
 }
