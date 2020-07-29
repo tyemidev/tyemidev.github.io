@@ -63,7 +63,7 @@ function appgen(id, name, description, link, offline){
 
     if(offline){
     button2.setAttribute('style', 'font-size:2vw; width:4vw;');
-    button2.setAttribute('onclick', 'window("open", "'+offline+'");');
+    button2.setAttribute('onclick', 'tyemiwindow("open", "'+offline+'");');
     }
 
     //append
@@ -86,7 +86,7 @@ function switcher(close, open){
     document.getElementById(open).style.display = 'block';
 }
 
-function window(method, url){
+function tyemiwindow(method, url){
     if(method == 'location'){
         window.location = url;
     }else if(method == 'location_href'){
