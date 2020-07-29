@@ -30,12 +30,11 @@ function listgen(ulid, display, switcheroffid, switcheronid){
 
 function appgen(id, name, description, link, offline){
     //declare variables
-    var div, h1, br1, h3, br2, br3, button1, br4, button2;
+    var div, h1, h3, br2, br3, button1, br4, button2;
 
     //create elements
     div = document.getElementById(id);
     h1 = document.createElement('h1');
-    br1 = document.createElement('br');
     h3 = document.createElement('h3');
     br2 = document.createElement('br');
     br3 = document.createElement('br');
@@ -56,8 +55,6 @@ function appgen(id, name, description, link, offline){
     }
 
     //attributes
-    h1.setAttribute('style', 'font-size:large;');
-    h3.setAttribute('style', 'font-size:large;');
     button1.setAttribute('style', 'font-size:2vw; width:4vw;');
     button1.setAttribute('onclick', 'window("open", "'+link+'");');
 
@@ -68,7 +65,6 @@ function appgen(id, name, description, link, offline){
 
     //append
     div.appendChild(h1);
-    div.appendChild(br1);
     div.appendChild(h3);
     div.appendChild(br2);
     div.appendChild(br3);
