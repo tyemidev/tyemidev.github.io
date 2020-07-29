@@ -1034,13 +1034,14 @@ AElFTkSuQmCC">
   });
 </script>
 <script>
-function list(){
+function load(){
   listgen('list', 'test', 'library', 'test');
+  appgen('test', 'test-title', 'test-description', 'data:text,test.');
 }
 </script>
 </head>
 <!--------------------------------->
-<body onload="setTimeout(list, 100);">
+<body onload="setTimeout(load, 100);">
 <!-- Tab links -->
 <div class="tab">
     <!-- Left aligned -->
