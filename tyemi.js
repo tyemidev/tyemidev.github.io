@@ -28,12 +28,13 @@ function listgen(ulid, display, switcheroffid, switcheronid){
     ul.appendChild(li);
 }
 
-function appgen(id, name, description, link, offline){
+function appgen(id, name, description, backid, link, offline){
     //declare variables
-    var div, h1, h3, br2, br3, button1, br4, button2;
+    var div, back, h1, h3, br2, br3, button1, br4, button2;
 
     //create elements
     div = document.getElementById(id);
+    back = document.createElement('button');
     h1 = document.createElement('h1');
     h3 = document.createElement('h3');
     br2 = document.createElement('br');
@@ -46,6 +47,7 @@ function appgen(id, name, description, link, offline){
     }
 
     //content
+    back.textContent = 'Back';
     h1.textContent = name;
     h3.textContent = description;
     button1.textContent = 'Install';
@@ -55,6 +57,7 @@ function appgen(id, name, description, link, offline){
     }
 
     //attributes
+    back.setAttribute('onclick', 'switcher("'+id+'", "'+backid+'");');
     button1.setAttribute('style', 'font-size:100%;');
     button1.setAttribute('onclick', 'tyemiwindow("open", "'+link+'");');
 
@@ -64,6 +67,7 @@ function appgen(id, name, description, link, offline){
     }
 
     //append
+    div.appendChild(back);
     div.appendChild(h1);
     div.appendChild(h3);
     div.appendChild(br2);
