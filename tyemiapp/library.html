@@ -34,10 +34,15 @@
 #list li button:hover:not(.header) {
   background-color: #eee; /* Add a hover effect to all links, except for headers */
 }
+
+#list h1{
+    text-align: center;
+    font-size: 18px;
+}
 </style>
 
 <script>
-    function search() {
+  function search() {
   // Declare variables
   var input, filter, ul, li, a, i, txtValue;
   input = document.getElementById('searchbar');
