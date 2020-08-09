@@ -1,14 +1,14 @@
 ---
-permalink: /tyemiapp
+permalink: /tyemiapp/social
 ---
 <!DOCTYPE html>
 <html>
 <!--------------------------------->
 <head>
 
-<title>Tyemi</title>
+<title>Tyemi Social</title>
 
-<link rel="stylesheet" type="text/css" href="../styles/tyemi.css"/>
+<link rel="stylesheet" type="text/css" href="https://tyemidev.github.io/styles/tyemi.css"/>
 
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -1696,35 +1696,46 @@ KeAU6I4CDujd0c9LOwWcAk4Bp4BTYCAo4IA+EK/BG+EUcAo4BZwCToHuKOCA3h39
 vLRTwCngFHAKOAUGggIO6APxGrwRTgGngFPAKeAU6I4C/x8VVWTwwI4PXAAAAABJ
 RU5ErkJggg==">
 
-<script type="text/javascript" src="https://slashsite.github.io/superwibr/js/tabs.js"></script>
-<script type="text/javascript" src="https://tyemidev.github.io/tyemi.js"></script>
+<style>
+  .grid{
+    display: inline-grid;
+  }
+  h1, button{
+    font-family: Menlo;
+    font-size:1.5vw;
+    height: 15vw;
+    width: 15vw;
+    padding: 1%;
+    margin: auto;
+    text-align: center;
+  }
+  button{
+    cursor:pointer;
+  }
+</style>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://tyemidev.github.io/tyemi.js"></script>
 <script>
-  $(function(){
-    $("#library").load("tyemiapp/library.html");
-  });
+  function openapp(url){
+    window.open(url);
+  }
 </script>
+
 </head>
 <!--------------------------------->
-<body onload="setTimeout(load, 100);">
-<!-- Tab links -->
-<div class="tab">
-    <!-- Left aligned -->
-    <button class="tablinks active" onclick="openTab(event, 'home')">Home</button>
-    <button class="tablinks" onclick="openTab(event, 'library')">Library</button>
-    <button class="tablinks" onclick="openTab(event, 'library')"></button>
+<body>
+<div style="text-align: center;">
+
+
+<h1 style="font-size: 3vw;">Tyemi Social</h1>
+<div class="grid"><button onclick="openapp('https://discordapp.com/channels/@me')">Discord</button></div>
+<div class="grid"><button onclick="openapp('https://reddit.com')">Reddit</button></div>
+<div class="grid"><button onclick="openapp('https://m.youtube.com')">Youtube</button></div>
+<div class="grid"><button onclick="openapp('https://m.twitter.com')">Twitter</button></div>
+<div class="grid"><button onclick="openapp('https://stackexchange.com')">Stack Exchange</button></div>
+
+
 </div>
-
-<div class="tabcontent" id="home" style="display: block; text-align: center;">
-  <h1>Tyemi</h1>
-  <h3>"It's pronounced tie-emee!"</h3>
-  <br/><br/>
-  <p>Use the Library to install PWAs.</p><br><br>
-</div>
-
-<div class="tabcontent" id="library"></div>
-
 </body>
 <!--------------------------------->
 </html>

@@ -98,3 +98,59 @@ function tyemiwindow(method, url){
         win.document.write('<iframe src="' + url  + '" frameborder="0" style="border:0; top:0px; left:0px; bottom:0px; right:0px; width:100%; height:100%;" allowfullscreen></iframe>');
     }
 }
+
+//===================//
+//                   //
+//    The new shit   //
+//                   //
+//===================//
+
+var tyemijs = (function(){
+    'use strict';
+
+    // Create the methods object
+    var methods = {};
+
+    //
+    // Methods
+    //
+
+    methods.createListButton = function(ulid, display, switcheroffid, appid){
+        //declare variables
+        var ul, li, button;
+
+        //get element input
+        ul = document.getElementById(ulid);
+
+        //create elements
+        li = document.createElement('li');
+        button = document.createElement('button');
+
+        //content
+        button.textContent = display;
+
+        //attributes
+        button.setAttribute('onclick', 'switcher("'+switcheroffid+'", "'+appid+'");')
+
+        //append
+        li.appendChild(button);
+        ul.appendChild(li);
+    };
+
+    methods.createListTitle = function(ulid, text){
+        //declare variables
+        var h1, ul;
+
+        //h1
+        h1 = document.createElement('h1');
+        h1.textContent = text;
+
+        //appending to ul
+        ul = document.getElementById(ulid);
+        ul.appendChild(h1);
+
+    };
+
+    // Expose the public methods
+    return methods;
+})();

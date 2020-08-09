@@ -7,7 +7,7 @@ we create PWAs; these can be used in-browser, but they turn into apps when you a
 Most of our PWAs come out with a version that can be used offline soon after being released. Some PWAs will not have an offline version, as they are dependant on a website to work.<br/><br/><br/>
 
 # Contribute
-You can contribute to Tyemi PWAs. Contact us at [].<br/><br/><br/>
+You can contribute to Tyemi PWAs. Contact us at [null]().<br/><br/><br/>
 
 # Use
-Ready to use Tyemi? [Go ahead!](./tyemi.md)
+Ready to use Tyemi? [Go ahead!](./tyemiapp/index.html)
