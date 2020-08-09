@@ -39,16 +39,11 @@
     text-align: center;
 }
 </style>
-<script>
-function load(){
-  appgen('test', 'test-title', 'test-description', 'lib', 'https://google.com');
-}
-</script>
-</head>
 
+</head>
 <body>
 
-<div id="lib" onload="setTimeout(load, 200);">
+<div id="lib">
 <div style="text-align: center;"><div style="display:inline-block"><input type="text" id="searchbar" onkeyup="search()" placeholder="Search.."></div></div>
 <ul id="list"></ul>
 </div>

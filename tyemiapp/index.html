@@ -1705,9 +1705,14 @@ RU5ErkJggg==">
     $("#library").load("tyemiapp/library.html");
   });
 </script>
+<script>
+function load(){
+  appgen('test', 'test-title', 'test-description', 'lib', 'https://google.com');
+}
+</script>
 </head>
 <!--------------------------------->
-<body>
+<body onload="setTimeout(load, 100);">
 <!-- Tab links -->
 <div class="tab">
     <!-- Left aligned -->
