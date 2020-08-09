@@ -148,8 +148,42 @@ var tyemijs = (function(){
         //appending to ul
         ul = document.getElementById(ulid);
         ul.appendChild(h1);
-
     };
+
+    methods.createAppPage = function(id, name, description, backid, link){
+        //declare variables
+        var div, back, h1, h3, br2, br3, button1, br4, button2;
+
+        //create elements
+        div = document.getElementById(id);
+        back = document.createElement('button');
+        h1 = document.createElement('h1');
+        h3 = document.createElement('h3');
+        br2 = document.createElement('br');
+        br3 = document.createElement('br');
+        button1 = document.createElement('button');
+        br4 = document.createElement('br');
+
+        //content
+        back.textContent = 'Back';
+        h1.textContent = name;
+        h3.textContent = description;
+        button1.textContent = 'Install';
+
+        //attributes
+        back.setAttribute('onclick', 'switcher("'+id+'", "'+backid+'");');
+        button1.setAttribute('style', 'font-size:100%;');
+        button1.setAttribute('onclick', 'tyemiwindow("open", "'+link+'");');
+
+        //append
+        div.appendChild(back);
+        div.appendChild(h1);
+        div.appendChild(h3);
+        div.appendChild(br2);
+        div.appendChild(br3);
+        div.appendChild(button1);
+        div.appendChild(br4);
+    }
 
     // Expose the public methods
     return methods;
