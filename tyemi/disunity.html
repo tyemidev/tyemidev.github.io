@@ -10,23 +10,6 @@ permalink: /tyemiapp/disunity
 Disunity
 </title>
 
-
-<style>
-body {
-  background-color: #00ffb5;
-}
-body,html{
-  overflow:hidden
-}
-</style>
-
-<script>
-  if (window.navigator.standalone){
-    window.location.href = "https://discordapp.com/channels/@me";
-  }
-</script>
-
-
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="white-translucent">
@@ -1436,11 +1419,31 @@ vAiIQL8I9Gal88nbD9m2P77FSnBAtImACIiACIiACPSfgByQ/jNWCiIgAn0gUDyybqWHVyCZjgin
 9IzA/A232nzPpEmQCIiACIiACIhAVgQ0C1ZWpJWOCIiACIiACIiACIiACIiAyQFRIRABERABERAB
 ERABERABEciMwP8HpNr9T78ekpIAAAAASUVORK5CYII=">
 
+<link rel="stylesheet" type="text/css" href="../styles/tyemi.css"/>
+<script type="text/javascript" src="https://slashsite.github.io/superwibr/js/tabs.js"></script>
+<script type="text/javascript" src="https://tyemidev.github.io/tyemi.js"></script>
+<script type="text/javascript" src="./disunity_resources/disunity.js"></script>
 
 </head>
-
 <body>
-add this to home screen.
-</body>
+<!-- Tab links -->
+<div class="tab">
+  <!-- Left aligned -->
+  <button class="tablinks active" onclick="openTab(event, 'home')">Home</button>
+  <button class="tablinks" onclick="openTab(event, 'discord')">Discord</button>
+  <button class="tablinks" onclick="openTab(event, 'alt')">Alt unregistered</button>
+</div>
 
+<!-- Home -->
+<div class="tabcontent" id="home" style="display: block; text-align: center;">
+  <h1>Disunity</h1>
+  <h3>A PWA with Discord and some tools.</h3>
+  <br/>
+  <p>Use the "Discord" tab to open discord.<br>Use the "Alt" tabs to quickly generate alts.</p>
+</div>
+
+<div class="tabcontent" id="discord"></div>
+
+
+</body>
 </html>
