@@ -161,7 +161,7 @@ var tyemijs = (function(){
         h3 = document.createElement('h3');
         br2 = document.createElement('br');
         br3 = document.createElement('br');
-        button = document.createElement('button');
+        button = document.createElement('a');
 
         //content
         back.textContent = 'Back';
