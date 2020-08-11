@@ -171,7 +171,7 @@ var tyemijs = (function(){
 
         //attributes
         back.setAttribute('onclick', 'switcher("'+id+'", "'+backid+'");');
-        button1.setAttribute('style', 'font-size:100%;');
+        button.setAttribute('style', 'font-size:100%;');
         button.setAttribute('onclick', 'tyemiwindow("location", "'+link+'");');
 
         //append
