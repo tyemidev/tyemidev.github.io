@@ -21,8 +21,10 @@ body,html{
 </style>
 
 <script>
-  if (window.navigator.standalone){
-  window.location.href = "https://discordapp.com/channels/@me"
+  function standalonetest(){
+    if (window.navigator.standalone){
+      window.open("https://discordapp.com/channels/@me")
+    }
   }
 </script>
 
@@ -1793,7 +1795,7 @@ Psf7PxDGAAAAAElFTkSuQmCC">
 
 </head>
 
-<body>
+<body onload="standalonetest();">
 add this to home screen.
 </body>
 
