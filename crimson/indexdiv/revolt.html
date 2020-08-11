@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<script>
+  function UpdateURL(){
+    var AddressbarContents = document.getElementById("addressbar").value;
+    var iframe = document.getElementById("iframe");
+    var PrevURL= iframe.getAttribute("value");
+
+    iframe.setAttribute("src", AddressbarContents);
+  }
+  function EUL(){
+    var AddressbarContents = document.getElementById("addressbar").value;
+    window.location = AddressbarContents
+  }
+  function bing(){
+    var iframe = document.getElementById("iframe");
+
+    iframe.setAttribute("src", "https://www.bing.com/?toWww=1&redig=C3EA383034E549D39B653CCBA5DEA823");
+  }
+</script>
+
+</head>
+
+
+<body>
+
+<div id="bar" style="display:flex; flex-direction: row;">
+<input type="url" id="addressbar" name="url" value="https://" style="height:50%; width:80%;">
+
+<button onclick="UpdateURL()" class="button">^Load^</button>
+<button onclick="EUL()" class="button">^Alt load^</button>
+<button onclick="bing()" class="button">Bing search</button>
+</div>
+
+<iframe id="iframe"
+  width="100%" height="90%"
+  src="https://bing.com"
+  frameborder="0" allowfullscreen=""
+  style="position:absolute; top:auto; left: 0;">
+</iframe>
+
+</body>
+
+</html>
