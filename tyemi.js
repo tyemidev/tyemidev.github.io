@@ -172,7 +172,7 @@ var tyemijs = (function(){
         //attributes
         back.setAttribute('onclick', 'switcher("'+id+'", "'+backid+'");');
         button.setAttribute('style', 'font-size:100%;');
-        button.setAttribute('onclick', 'tyemiwindow("location", "'+link+'");');
+        button.setAttribute('onclick', 'tyemiwindow("open", "'+link+'");');
 
         //append
         div.appendChild(back);
