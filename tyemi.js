@@ -161,7 +161,7 @@ var tyemijs = (function(){
         h3 = document.createElement('h3');
         br2 = document.createElement('br');
         br3 = document.createElement('br');
-        button = document.createElement('a');
+        button = document.createElement('button');
 
         //content
         back.textContent = 'Back';
@@ -172,8 +172,7 @@ var tyemijs = (function(){
         //attributes
         back.setAttribute('onclick', 'switcher("'+id+'", "'+backid+'");');
         button.setAttribute('style', 'font-size:100%;');
-        //button.setAttribute('onclick', 'tyemiwindow("location", "'+link+'");');
-        button.setAttribute('href', link);
+        button.setAttribute('onclick', 'tyemiwindow("location", "'+link+'");');
 
         //append
         div.appendChild(back);
