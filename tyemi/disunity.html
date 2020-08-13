@@ -1427,8 +1427,8 @@ ERABERABEciMwP8HpNr9T78ekpIAAAAASUVORK5CYII=">
 <div class="tab">
   <!-- Left aligned -->
   <button class="tablinks active" onclick="openTab(event, 'home')">Home</button>
-  <button class="tablinks" onclick="openTab(event, 'discord')">Discord</button>
-  <button class="tablinks" onclick="openTab(event, 'alt')">Alt unregistered</button>
+  <button class="tablinks" onclick="openTab(event, 'discord')">Discord @me</button>
+  <!-- <button class="tablinks" onclick="openTab(event, 'alt')"></button> -->
 </div>
 
 <!-- Home -->
@@ -1436,16 +1436,18 @@ ERABERABEciMwP8HpNr9T78ekpIAAAAASUVORK5CYII=">
   <h1>Disunity</h1>
   <h3>A PWA with Discord and some tools.</h3>
   <br/>
-  <p>Use the "Discord" tab to open discord.<br>Use the "Alt" tabs to quickly generate alts.</p>
+  <p>Use the "Discord @me" tab to open your account (if you are logged in).</p>
 </div>
 
 <!-- Discord -->
 <div class="tabcontent" id="discord" style="padding:2rem">
   <h1>Discord</h1>
-  <h3>Auto-open your account</h3>
-  <sub>We will not steal your information, just check it yourself by inspecting the page!</sub><br/><br/><br/><br/>
-  <input type="text" id="discordemail" placeholder="email" style="background-color: white;"><br/>
-  <input type="text" id="discordpassword" placeholder="password" style="background-color: white;">
+  <h3>Opens your "@me" page. If you are not logged in, you will be prompted to do so.</h3>
+  <br/><br/><br/><br/>
+  <button 
+    style="width: 100%; font-size: 3rem; padding:1% 0;" 
+    onclick="disunity.newBlank('@me');"
+    >Open</button>
 
 </div>
 
