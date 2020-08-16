@@ -10,6 +10,10 @@ layout: crimson
 ## CRIMSON 2
 <br/>
 
+### CRIMSON 2.1.1
+- Fixed bugs:
+[CR-34a] All tabs were blank
+
 ### CRIMSON 2.1.0
 - Fixed bugs:
 [CR-34] All tabs were blank
