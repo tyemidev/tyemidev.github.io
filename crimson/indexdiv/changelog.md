@@ -10,7 +10,10 @@ layout: crimson
 ## CRIMSON 2
 <br/>
 
-### CRIMSON 2.1.2ß
+### CRIMSON 2.1.3
+- Changed the text on the home page.
+
+### CRIMSON 2.1.2
 - Fixed bugs:
 [CR-34b] Multiple errors while trying to load the library apps and pages would appear blank.
 
