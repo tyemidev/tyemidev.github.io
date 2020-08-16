@@ -10,6 +10,11 @@ layout: crimson
 ## CRIMSON 2
 <br/>
 
+### CRIMSON 2.1.0
+- Fixed bugs:
+[CR-34] All tabs were blank
+
+
 ### CRIMSON 2.0.8 (MAOJR ADVANCEMENT)
 - Cryptii is now actually functional
 - Discovered revolutionary thing in the process
