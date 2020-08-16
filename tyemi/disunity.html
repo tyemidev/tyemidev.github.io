@@ -1417,6 +1417,7 @@ vAiIQL8I9Gal88nbD9m2P77FSnBAtImACIiACIiACPSfgByQ/jNWCiIgAn0gUDyybqWHVyCZjgin
 ERABERABEciMwP8HpNr9T78ekpIAAAAASUVORK5CYII=">
 
 <link rel="stylesheet" type="text/css" href="../styles/tyemi.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script type="text/javascript" src="https://slashsite.github.io/superwibr/js/tabs.js"></script>
 <script type="text/javascript" src="https://tyemidev.github.io/tyemi.js"></script>
 <script type="text/javascript" src="./disunityResources/disunity.js"></script>
@@ -1425,32 +1426,61 @@ ERABERABEciMwP8HpNr9T78ekpIAAAAASUVORK5CYII=">
 <body>
 <!-- Tab links -->
 <div class="tab">
-  <!-- Left aligned -->
-  <button class="tablinks active" onclick="openTab(event, 'home')">Home</button>
-  <button class="tablinks" onclick="openTab(event, 'discord')">Discord @me</button>
-  <!-- <button class="tablinks" onclick="openTab(event, 'alt')"></button> -->
+  <button class="tablinks" onclick="openTab(event, 'home')">Home</button>
+  <button class="tablinks" onclick="openTab(event, '@me')">@me</button>
+  <button class="tablinks" onclick="openTab(event, 'login')">Login</button>
+  <button class="tablinks" onclick="openTab(event, 'register')">Register</button> 
 </div>
 
-<!-- Home -->
-<div class="tabcontent" id="home" style="display: block; text-align: center;">
-  <h1>Disunity</h1>
-  <h3>A PWA with Discord and some tools.</h3>
-  <br/>
-  <p>Use the "Discord @me" tab to open your account (if you are logged in).</p>
-</div>
+<!-- Greeting -->
+<div class="tabcontent" style="display: block; text-align: center;"><br><br><br><h1>Disunity</h1><h3>A PWA for Discord.<br><br>Open a tab to start.</h3></div>
 
+<!------------->
 <!-- Discord -->
-<div class="tabcontent" id="discord" style="padding:2rem">
-  <h1>Discord</h1>
-  <h3>Opens your "@me" page. If you are not logged in, you will be prompted to do so.</h3>
+<!------------->
+
+<!-- homepage -->
+<div class="tabcontent" id="home" style="padding:2rem">
+  <h1>Home</h1>
+  <h3>Opens Discord's website on the homepage.</h3>
   <br/><br/><br/><br/>
   <button 
-    style="width: 100%; font-size: 3rem; padding:1% 0;" 
-    onclick="disunity.newBlank('@me');"
-    >Open</button>
-
+    style="width: 100%; font-size: 2rem; padding:1% 0;" 
+    onclick="disunity.new('homepage');"
+  >Open</button>
 </div>
 
+<!-- @me -->
+<div class="tabcontent" id="@me" style="padding:2rem">
+  <h1>@me</h1>
+  <h3>Opens your "@me" page.<br>If you are not logged in, you will be prompted to do so.</h3>
+  <br/><br/><br/><br/>
+  <button 
+    style="width: 100%; font-size: 2rem; padding:1% 0;" 
+    onclick="disunity.new('@me');"
+    >Open</button>
+</div>
 
+<!-- login -->
+<div class="tabcontent" id="login" style="padding:2rem">
+  <h1>Login</h1>
+  <h3>Opens the Discord login form.<br/>If you are logged in, this will simply open your @me page.</h3>
+  <br/><br/><br/><br/>
+  <button 
+    style="width: 100%; font-size: 2rem; padding:1% 0;" 
+    onclick="disunity.new('login');"
+  >Open</button>
+</div>
+
+<!-- register -->
+<div class="tabcontent" id="register" style="padding:2rem">
+  <h1>Register</h1>
+  <h3>Opens the Discord register form.<br/>If you are logged in, this will simply open your @me page.</h3>
+  <br/><br/><br/><br/>
+  <button 
+    style="width: 100%; font-size: 2rem; padding:1% 0;" 
+    onclick="disunity.new('register');"
+  >Open</button>
+</div>
 </body>
 </html>
