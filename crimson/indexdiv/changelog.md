@@ -10,6 +10,10 @@ layout: crimson
 ## CRIMSON 2
 <br/>
 
+### CRIMSON 2.1.2ß
+- Fixed bugs:
+[CR-34b] Multiple errors while trying to load the library apps and pages would appear blank.
+
 ### CRIMSON 2.1.1
 - Fixed bugs:
 [CR-34a] All tabs were blank
