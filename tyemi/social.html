@@ -2864,44 +2864,74 @@ ABkkbdUlAiLQMwILV9/uFnqmTYpEQAREQAREQAQGRUC/gjUo0qpHBERABERABERABERABETAaQGi
 RiACIiACIiACIiACIiACIjAwAv8fDE9YoHn8a1sAAAAASUVORK5CYII=">
 
 <style>
-  .grid{
-    display: inline-grid;
+h1 {
+  font-size: 3vw;
+  text-align: center;
+}
+
+.container {
+  margin: 5vw 2vw;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 540px){
+  .container button {
+    padding: 0.52vw 1.25vw;
+    width: 10vw;
+    height: 10vw;
+    margin: 0 auto 0;
+    cursor: pointer;
+    float: left; /* Float the buttons side by side */
   }
-  h1, button{
-    font-family: Menlo;
-    font-size:1.5vw;
-    height: 15vw;
-    width: 15vw;
-    padding: 1%;
-    margin: auto;
-    text-align: center;
+}
+@media (min-width: 541px){
+  .container button {
+    padding: 0.52vw 1.25vw;
+    width: 10vw;
+    height: 10vw;
+    margin: 0 auto 0;
+    cursor: pointer;
+    float: none;
   }
-  button{
-    cursor:pointer;
-  }
+}
+
+.container button span {
+  font-size: 1vw;
+}
+
+/* Clear floats (clearfix hack) */
+.container:after {
+  content: "";
+  clear: both;
+  display: table;
+}
 </style>
 
 <script type="text/javascript" src="https://tyemidev.github.io/tyemi.js"></script>
 <script>
-  function openapp(url){
-    window.open(url);
+function load(){
+  if(viewport.width < 540){
+
   }
+}
+
+function openapp(url){
+  window.open(url);
+}
 </script>
 
 </head>
 <!--------------------------------->
 <body>
-<div style="text-align: center;">
-
-
-<h1 style="font-size: 3vw;">Tyemi Social</h1>
-<div class="grid"><button onclick="openapp('https://discordapp.com/channels/@me')">Discord</button></div>
-<div class="grid"><button onclick="openapp('https://reddit.com')">Reddit</button></div>
-<div class="grid"><button onclick="openapp('https://m.youtube.com')">Youtube</button></div>
-<div class="grid"><button onclick="openapp('https://m.twitter.com')">Twitter</button></div>
-<div class="grid"><button onclick="openapp('https://stackexchange.com')">Stack Exchange</button></div>
-
-
+<h1>Tyemi Social</h1><br>
+<div class="container">
+  <button onclick="openapp('https://discordapp.com/channels/@me')"><span>Discord</span></button>
+  <button onclick="openapp('https://reddit.com')"><span>Reddit</span></button>
+  <button onclick="openapp('https://m.youtube.com')"><span>Youtube</span></button>
+  <button onclick="openapp('https://m.twitter.com')"><span>Twitter</span></button>
+  <button onclick="openapp('https://stackexchange.com')"><span>Stack Exchange</span></button>
 </div>
 </body>
 <!--------------------------------->
