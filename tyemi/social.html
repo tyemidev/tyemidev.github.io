@@ -2876,24 +2876,22 @@ h1 {
   flex-wrap: wrap;
 }
 
-@media (max-width: 540px){
-  .container button {
-    padding: 0.52vh 1.25vh;
-    width: 10vh;
-    height: 10vh;
-    margin: 0 auto 0;
-    cursor: pointer;
-    float: left; /* Float the buttons side by side */
-  }
-}
-@media (min-width: 541px){
+@media (min-width: 10cm){
   .container button {
     padding: 0.52vw 1.25vw;
     width: 10vw;
     height: 10vw;
     margin: 0 auto 0;
     cursor: pointer;
-    float: none;
+  }
+}
+@media (max-width: 10cm){
+  .container button {
+    padding: 0.52vh 1.25vh;
+    width: 10vh;
+    height: 10vh;
+    margin: 0 auto 0;
+    cursor: pointer;
   }
 }
 
