@@ -71,7 +71,7 @@ var tyemijs = (function(){
         //attributes
         back.setAttribute('onclick', 'switcher("'+id+'", "'+backid+'");');
         button.setAttribute('style', 'font-size:100%;');
-        button.setAttribute('onclick', 'tyemiwindow("open", "'+link+'");');
+        button.setAttribute('onclick', 'tyemiopen("'+link+'");');
 
         //append
         div.appendChild(back);
@@ -85,3 +85,16 @@ var tyemijs = (function(){
     // Expose the public methods
     return methods;
 })();
+
+function switcher(offid, onid){
+    var off, on;
+    off = document.getElementById(offid);
+    on = document.getElementById(onid);
+
+    off.style.display = none;
+    on.style.display = block;
+}
+
+function tyemiopen(url){
+    window.open(url);
+}
