@@ -91,8 +91,8 @@ function switcher(offid, onid){
     off = document.getElementById(offid);
     on = document.getElementById(onid);
 
-    off.style.display = none;
-    on.style.display = block;
+    off.style.display = 'none';
+    on.style.display = 'block';
 }
 
 function tyemiopen(url){
