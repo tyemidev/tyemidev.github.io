@@ -4,16 +4,6 @@
 //               //
 //---------------//
 
-window.onload = function(){
-
-    var hamburger = document.getElementById('hamburger');
-    hamburger.onclick = function(){
-        alert('e')
-    }
-    
-}
-
-
 var revolt = (function(){
     'use strict';
 
@@ -40,5 +30,23 @@ function openNav() {
   
 function closeNav() {
     document.getElementById("myNav").style.height = "0%";
+}
+
+function openTab(evt, tabName) {
+    // Declare all variables
+    var i, tabcontent;
+  
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+  
+    // Show the current tab
+    document.getElementById(tabName).style.display = "block";
+
+    // Hide the navigator
+    closeNav();
+    
 }
 

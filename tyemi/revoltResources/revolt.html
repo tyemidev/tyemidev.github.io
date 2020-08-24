@@ -11,7 +11,6 @@
 <link rel="stylesheet" type="text/css" href="https://tyemidev.github.io/styles/tyemi.css"/>
 <link rel="stylesheet" type="text/css" href="./revolt.css"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<script type="text/javascript" src="https://slashsite.github.io/superwibr/js/tabs.js"></script>
 <script type="text/javascript" src="https://tyemidev.github.io/tyemi.js"></script>
 <script type="text/javascript" src="./revolt.js"></script>
 
@@ -22,21 +21,29 @@
 <div id="myNav" class="overlay">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <div class="overlay-content">
-      <a href="#">About</a>
-      <a href="#">Services</a>
-      <a href="#">Clients</a>
-      <a href="#">Contact</a>
+      <a href="javascript:void(0)" onclick="openTab(event, 'webnav')">Navigator</a>
+      <a href="javascript:void(0)" onclick="openTab(event, 'tabs')">Tab manager</a>
+      <a href="javascript:void(0)" onclick="openTab(event, 'settings')">Settings</a>
+      <a href="javascript:void(0)" onclick="openTab(event, 'docs')">Documentation</a>
     </div>
 </div>
 
-<div id="webnav">
+<!-- Web navigator -->
+<div id="webnav" class="tabcontent" style="display: block;">
     <!-- Top bar -->
     <div class="barcontainer">
         <input id="adressbar" placeholder="Enter URL here">
-        <i id="hamburger" class="fa fa-bars"></i>
+        <i id="hamburger" class="fa fa-bars" onclick="openNav();"></i>
     </div>
 
-    <div class="framecontainer"></div>
+    <div class="framecontainer">
+        <iframe id="iframe"
+            width="99.999%" height="93%"
+            src="./bing_modResources/bing_mod.html"
+            frameborder="0" allowfullscreen=""
+            style="position:absolute; top:auto; left: 0">
+        </iframe>
+    </div>
 </div>
 
 </body>

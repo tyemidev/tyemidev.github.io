@@ -1,6 +1,6 @@
 #adressbar {
     width: 95%;
-    font-size: 1rem;
+    font-size: 1.3rem;
     color: whitesmoke ;
     border: solid teal;
 }
@@ -11,7 +11,7 @@
 
 #hamburger {
     cursor: pointer;
-    font-size: 1.2rem;
+    font-size: 1.7rem;
 }
 
 .barcontainer {
@@ -22,7 +22,7 @@
 .framecontainer {
     width: 98%;
     height: 90%;
-    padding: 1%;
+    padding: 0.5%;
 }
 
 
@@ -48,7 +48,7 @@
     margin-top: 30px;
   }
   
-  .overlay button {
+  .overlay a {
     padding: 8px;
     text-decoration: none;
     font-size: 36px;
@@ -59,7 +59,7 @@
     transition: 0.3s;
   }
   
-  .overlay button:hover, .overlay button:focus {
+  .overlay a:hover, .overlay a:focus {
     color: #f1f1f1;
   }
   
@@ -72,7 +72,7 @@
   
   @media screen and (max-height: 450px) {
     .overlay {overflow-y: auto;}
-    .overlay button {font-size: 20px}
+    .overlay a {font-size: 20px}
     .overlay .closebtn {
     font-size: 40px;
     top: 15px;
