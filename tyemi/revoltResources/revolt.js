@@ -50,3 +50,8 @@ function openTab(evt, tabName) {
     
 }
 
+function nyan(){
+    document.getElementById('nyan').play()
+}
+
+

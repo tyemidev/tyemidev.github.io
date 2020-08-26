@@ -11,3 +11,11 @@ Tyemi has a discord server where you can view the changelog, see some sneak-peek
 
 # Use
 Ready to use Tyemi? [Go ahead!](./tyemiapp/index.html)
+<br/><br/><br/>
+<br/><br/><br/>
+<br/><br/><br/>
+<br/><br/><br/>
+<br/><br/><br/>
+<br/><br/><br/>
+
+<sub>They almost found me... *huff* whatever you do, DO NOT put your volume to the maximum in the puzzle app!! OH NO THEY FOU-- *static*</sub>
