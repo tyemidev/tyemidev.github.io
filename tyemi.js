@@ -49,7 +49,7 @@ var tyemijs = (function(){
         ul.appendChild(h1);
     };
 
-    methods.createAppPage = function(id, name, description, backid, link){
+    methods.createAppPage = function(id, name, description, backid, link, code){
         //declare variables
         var div, back, h1, h3, br2, br3, button;
 
@@ -80,6 +80,17 @@ var tyemijs = (function(){
         div.appendChild(br2);
         div.appendChild(br3);
         div.appendChild(button);
+
+        //
+        // Terminal code
+        //
+        var br4, br5, codeline;
+
+        br4 = document.createElement('br');
+        br5 = document.createElement('br');
+        codeline = document.createElement('p');
+
+        codeline.textContent = 'Code for Tyemi Terminal: '+code;
     }
 
     // Expose the public methods

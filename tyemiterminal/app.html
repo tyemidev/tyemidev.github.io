@@ -1,15 +1,18 @@
----
-permalink: /tyemiapp
----
+<!--
+=======================================================
+||               >! INSPECTOR ALERT !<               ||
+||    We would like for you NOT to inspect our code. ||
+||    If you have concerns on security, go ahead,    ||
+||    but please don't take any code. We worked hard ||
+||    to make it and would like to keep it safe.     ||
+=======================================================
+-->
 <!DOCTYPE html>
 <html>
-<!--------------------------------->
 <head>
+<title>&gt;Tyemi&lt;</title>
 
-<title>Tyemi</title>
-
-<link rel="stylesheet" type="text/css" href="../styles/tyemi.css"/>
-
+<!-- Meta -->
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -1696,58 +1699,29 @@ KeAU6I4CDujd0c9LOwWcAk4Bp4BTYCAo4IA+EK/BG+EUcAo4BZwCToHuKOCA3h39
 vLRTwCngFHAKOAUGggIO6APxGrwRTgGngFPAKeAU6I4C/x8VVWTwwI4PXAAAAABJ
 RU5ErkJggg==">
 
-<script type="text/javascript" src="https://slashsite.github.io/superwibr/js/tabs.js"></script>
-<script type="text/javascript" src="../tyemi.js"></script>
+<!-- Style -->
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');body{background-color:#143c53;font-family:'Share Tech Mono';color:#22ffa7}a{color:#42ffd3}input{font-family:Menlo;color:#42ffd3;background-color:#5a676b}button{font-family:Menlo;background-color:#5a676b;color:#42ffd3;text-align:center;text-decoration:none;display:block}code{background-color:ivory}.tab{overflow:hidden;background-color:#f1f1f1}.tab button{background-color:inherit;color:#5a676b;float:left;border:0;outline:0;cursor:pointer;padding:14px 16px;transition:.3s}.tab button:hover{background-color:#ddd}.tab button.active{background-color:#5a676b;color:#42ffd3}.tabcontent{display:none;padding:6px 12px}.dropdown{float:left;overflow:hidden;transition:.3s}.dropdown .dropbtn{background-color:inherit;color:#5a676b;float:none;border:0;outline:0;cursor:pointer;padding:14px 16px;transition:.3s;font-family:inherit;margin:0}.dropdown-content{display:none;position:absolute;background-color:#f9f9f9;min-width:160px;box-shadow:0 8px 16px 0 rgba(0,0,0,0.2);z-index:1;transition:.3s}.dropdown-content button{float:none;color:black;padding:12px 16px;text-decoration:none;display:block;text-align:left}.dropdown-content button:hover{background-color:#ddd}.dropdown:hover .dropdown-content{display:block;transition:1s}
+</style>
 
+<!-- Scripts -->
+<script type="text/javascript" src="https://slashsite.github.io/superwibr/js/tabs.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
-  $(function(){
-    $("#library").load("tyemiapp/library.html");
-  });
+var w = window.open('data:text/plain,test')
 </script>
-<script>
-function load(){
-  //list items
-  tyemijs.createListTitle('list', 'Tyemi Tools');
-  tyemijs.createListButton('list', 'Tyemi Terminal')
 
-  tyemijs.createListTitle('list', 'Tyemi Originals'); 
-  tyemijs.createListButton('list', 'Tyemi - Social', 'lib', 'tysocial');
-  tyemijs.createListButton('list', 'Tyemi - Disunity (Discord)', 'lib', 'disunity');
-  tyemijs.createListButton('list', 'Tyemi - Snoo (Reddit)', 'lib', 'snoo');
-
-  tyemijs.createListTitle('list', 'CRIMSON');
-  tyemijs.createListButton('list', 'CRIMSON Engine ', 'lib', 'crimson');
-
-  //app items
-  tyemijs.createAppPage('tyterminal', 'Tyemi Terminal', 'A tool that lets you compile our PWAs into offline versions.', 'lib', 'https://tyemidev.github.io/tyemiterminal/installer');
-  
-  tyemijs.createAppPage('tysocial', 'Tyemi Social', 'A collection of buttons that open different social services.', 'lib', 'https://tyemidev.github.io/tyemi/social');
-  tyemijs.createAppPage('disunity', 'Tyemi Disunity', 'A PWA version of Discord for the ones (like us) who prefer the website version.', 'lib', 'https://tyemidev.github.io/tyemi/disunityResources/disunity');
-  tyemijs.createAppPage('snoo', 'Tyemi Snoo', 'A PWA version of Reddit for the ones (like us) who prefer the website version.', 'lib', 'https://tyemidev.github.io/tyemi/snoo');
-
-  tyemijs.createAppPage('crimson', 'CRIMSON', 'A PWA containing all the wacky stuff CRIMSON creates, including a browser... made in the very language browsers read; HTML.', 'lib', 'https://tyemidev.github.io/crimson/index');
-}
-</script>
 </head>
-<!--------------------------------->
-<body onload="setTimeout(load, 100);">
+<body>
 <!-- Tab links -->
 <div class="tab">
     <!-- Left aligned -->
-    <button class="tablinks active" onclick="openTab(event, 'home')">Home</button>
+    <button class="tablinks" onclick="openTab(event, 'offline')">Offline Compiler</button>
     <button class="tablinks" onclick="openTab(event, 'library')">Library</button>
 </div>
 
-<div class="tabcontent" id="home" style="display: block; text-align: center;">
-  <h1>Tyemi</h1>
-  <h3>"It's pronounced tie-emee!"</h3>
-  <br/><br/>
-  <p>Use the Library to install PWAs.</p><br><br>
-</div>
-
-<div class="tabcontent" id="library"></div>
+<!-- Greet -->
+<div class="tabcontent" style="display: block; text-align: center;"><h1>Tyemi Terminal</h1><p>Choose a tab to start</p></div>
 
 </body>
-<!--------------------------------->
 </html>
