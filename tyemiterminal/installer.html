@@ -15,9 +15,11 @@ function install(){
    $("#autodate").load("https://tyemidev.github.io/tyemiterminal/app.html");
    autodate = document.getElementById('autodate');
 
-   // Opening it in data form
-   w = window.open();
-   w.document.write(autodate.innerHTML);
+    setTimeout(() => {
+        // Opening it in data form
+        w = window.open('', '_blank');
+        w.document.write(autodate.innerHTML);
+    }, 300);
 };
 </script>
 
