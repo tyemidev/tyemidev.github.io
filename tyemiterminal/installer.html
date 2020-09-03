@@ -14,11 +14,11 @@ function install(){
    // Getting current >Tyemi< app
    $("#autodate").load("https://tyemidev.github.io/tyemiterminal/app.html");
    autodate = document.getElementById('autodate');
-   app = autodate.innerText;
+   app = autodate.innerHTML;
 
    // Opening it in data form
    w = window.open();
-   w.document.write(app);
+   w.document.write('<p>test<p>');
 };
 </script>
 
