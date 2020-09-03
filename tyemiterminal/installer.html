@@ -9,16 +9,15 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
 function install(){
-   var  w, autodate, app;
+   var  w, autodate;
 
    // Getting current >Tyemi< app
    $("#autodate").load("https://tyemidev.github.io/tyemiterminal/app.html");
    autodate = document.getElementById('autodate');
-   app = autodate.innerHTML;
 
    // Opening it in data form
    w = window.open();
-   w.document.write('<p>test<p>');
+   w.document.write(autodate.innerHTML);
 };
 </script>
 
