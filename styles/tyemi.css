@@ -55,6 +55,7 @@ code {
   
   /* Style the buttons that are used to open the tab content */
   .tab button {
+    font-family: 'Share Tech Mono';
     background-color: inherit;
     color: #5a676b;
     float: left;
