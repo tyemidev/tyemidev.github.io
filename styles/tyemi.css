@@ -24,13 +24,13 @@ a {
 }
 
 input {
-    font-family: Menlo;
+    font-family: 'Share Tech Mono';
     color: #42ffd3;
     background-color: #5a676b;
 }
 
 button {
-    font-family: Menlo;
+    font-family: 'Share Tech Mono';
     background-color: #5a676b;
     color: #42ffd3;
     text-align: center;
