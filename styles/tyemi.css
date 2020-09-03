@@ -6,9 +6,16 @@
 *   tyemi turquoise ( #22ffa7 )
 *   tyemi marine ( #143c53 )
 */
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+html{
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 body {
     background-color: #143c53;
-    font-family: Menlo;
+    font-family: 'Share Tech Mono';
     color: #22ffa7;
 }
 
