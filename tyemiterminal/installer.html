@@ -5,14 +5,20 @@
 
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
 <link rel="stylesheet" type="text/css" href="../styles/tyemi.css"/>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');body{font-family:'Share Tech Mono';}html{-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;}
-</style>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
 function install(){
-   var  
+   var  w, autodate, app;
+
+   // Getting current >Tyemi< app
+   $("#autodate").load("tyemiterminal/app.html");
+   autodate = document.getElementById('autodate');
+   app = autodate.innerHTML;
+
+   // Opening it in data form
+   w = window.open();
+   w.document.write(app);
 };
 </script>
 
