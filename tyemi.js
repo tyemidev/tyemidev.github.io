@@ -109,3 +109,33 @@ function switcher(offid, onid){
 function tyemiopen(url){
     window.open(url);
 }
+
+/*
+Carbonite- preserved scripts that we might use one day.
+
+function blobt(type, data){
+    const base64data = data;
+    const contentType = type;
+
+    const byteCharacters = atob(base64data.substr(`data:${contentType};base64,`.length));
+    const byteArrays = [];
+
+    for (let offset = 0; offset < byteCharacters.length; offset += 1024) {
+        const slice = byteCharacters.slice(offset, offset + 1024);
+
+        const byteNumbers = new Array(slice.length);
+        for (let i = 0; i < slice.length; i++) {
+            byteNumbers[i] = slice.charCodeAt(i);
+        }
+
+        const byteArray = new Uint8Array(byteNumbers);
+
+        byteArrays.push(byteArray);
+    }
+    const blob = new Blob(byteArrays, {type: contentType});
+    const blobUrl = URL.createObjectURL(blob);
+
+    window.open(blobUrl, '_blank');
+}
+
+*/
