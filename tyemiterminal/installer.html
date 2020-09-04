@@ -9,18 +9,45 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
 function install(){
-   var  w, autodate;
+   var autodate, enapp, data;
 
    // Getting current >Tyemi< app
    $("#autodate").load("https://tyemidev.github.io/tyemiterminal/app.html");
    autodate = document.getElementById('autodate');
 
     setTimeout(() => {
-        // Opening it in data form
-        w = window.open('about:blank');
-        w.document.write(autodate.innerHTML);
+        // Encode
+        encapp = btoa(autodate.innerHTML);
+
+        // Blob
+        blobt('text/html', 'data:text/html;base64,'+encapp)
     }, 300);
 };
+
+function blobt(type, data){
+    const base64data = data;
+    const contentType = type;
+
+    const byteCharacters = atob(base64data.substr(`data:${contentType};base64,`.length));
+    const byteArrays = [];
+
+    for (let offset = 0; offset < byteCharacters.length; offset += 1024) {
+        const slice = byteCharacters.slice(offset, offset + 1024);
+
+        const byteNumbers = new Array(slice.length);
+        for (let i = 0; i < slice.length; i++) {
+            byteNumbers[i] = slice.charCodeAt(i);
+        }
+
+        const byteArray = new Uint8Array(byteNumbers);
+
+        byteArrays.push(byteArray);
+    }
+    const blob = new Blob(byteArrays, {type: contentType});
+    const blobUrl = URL.createObjectURL(blob);
+
+    window.open(blobUrl, '_blank');
+}
 </script>
 
 </head>
