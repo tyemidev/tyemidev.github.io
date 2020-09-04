@@ -13,8 +13,9 @@ function install(){
 
    // Getting current >Tyemi< app
    var ifrm = document.getElementById('autodate');
+   var win = ifrm.contentWindow;
    var doc = ifrm.contentDocument? ifrm.contentDocument: ifrm.contentWindow.document;
-   autodate = doc.documentElement.innerHTML;
+   autodate = doc.getElementsByTagName('html')[0].innerHTML;
 
     setTimeout(() => {
        /*// Open and write
