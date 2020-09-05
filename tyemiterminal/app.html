@@ -1703,12 +1703,91 @@ RU5ErkJggg==">
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');body{background-color:#143c53;font-family:'Share Tech Mono';color:#22ffa7}a{color:#42ffd3}input{font-family:Menlo;color:#42ffd3;background-color:#5a676b}button{font-family:Menlo;background-color:#5a676b;color:#42ffd3;text-align:center;text-decoration:none;display:block}code{background-color:ivory}.tab{overflow:hidden;background-color:#f1f1f1}.tab button{background-color:inherit;color:#5a676b;float:left;border:0;outline:0;cursor:pointer;padding:14px 16px;transition:.3s}.tab button:hover{background-color:#ddd}.tab button.active{background-color:#5a676b;color:#42ffd3}.tabcontent{display:none;padding:6px 12px}.dropdown{float:left;overflow:hidden;transition:.3s}.dropdown .dropbtn{background-color:inherit;color:#5a676b;float:none;border:0;outline:0;cursor:pointer;padding:14px 16px;transition:.3s;font-family:inherit;margin:0}.dropdown-content{display:none;position:absolute;background-color:#f9f9f9;min-width:160px;box-shadow:0 8px 16px 0 rgba(0,0,0,0.2);z-index:1;transition:.3s}.dropdown-content button{float:none;color:black;padding:12px 16px;text-decoration:none;display:block;text-align:left}.dropdown-content button:hover{background-color:#ddd}.dropdown:hover .dropdown-content{display:block;transition:1s}
 </style>
+<style>::placeholder{color: #42ffd3; opacity:50%;}</style>
 
 <!-- Scripts -->
-<script type="text/javascript" src="https://slashsite.github.io/superwibr/js/tabs.js"></script>
+<script type="text/javascript">
+    // <script type="text/javascript" src="https://slashsite.github.io/superwibr/js/tabs.js">
+function openTab(evt, tabName) {
+    // Declare all variables
+    var i, tabcontent, tablinks;
+  
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+  
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+  
+    // Show the current tab, and add an "active" class to the button that opened the tab
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
+function autodatef(code){
+    var app;
+    // 
+    switch(code){
+        case "ty001":
+            app = "https://tyemidev.github.io/tyemi/social"
+        break;
+        case "ty002":
+            app = "https://tyemidev.github.io/tyemi/disunityResources/disunity"
+        break;
+        case "ty003":
+            app = "https://tyemidev.github.io/tyemi/snoo"
+        break;
+        case "cr001":
+            app = "https://tyemidev.github.io/crimson/index"
+        break;
 
+        document.getElementById('autodate').src = app;
+    };
+};
+
+function install(){
+   var autodate, enapp;
+
+   // Load app from code
+   var code = document.getElementById("codeinput").value;
+   autodatef(code);
+
+    setTimeout(() => {
+
+       // Getting current loaded app
+       var ifrm = document.getElementById('autodate');
+       autodate = ifrm.contentWindow.document.getElementsByTagName('html')[0].outerHTML;
+
+        // Fix html
+        var fixdate = "<!DOCTYPE html>"+autodate
+
+        // Make URI and copy
+        enapp = 'data:text/html;base64,'+btoa(fixdate);
+        document.getElementById("content").value = enapp
+        copy();
+
+    }, 500);
+};
+
+function copy() {
+  /* Get the text field */
+  var copyText = document.getElementById("content");
+
+  /* Select the text field */
+  copyText.select();
+  var copytextcontent = copytext.value;
+  copyText.setSelectionRange(0, copytextcontent.length); /*For mobile devices*/
+
+  /* Copy the text inside the text field */
+  document.execCommand("copy");
+}
 </script>
 
 </head>
@@ -1717,11 +1796,34 @@ RU5ErkJggg==">
 <div class="tab">
     <!-- Left aligned -->
     <button class="tablinks" onclick="openTab(event, 'offline')">Offline Compiler</button>
-    <button class="tablinks" onclick="openTab(event, 'library')">Library</button>
+    
 </div>
 
 <!-- Greet -->
-<div class="tabcontent" style="display: block; text-align: center;"><h1>Tyemi Terminal</h1><p>Choose a tab to start</p><button onclick="test();"></button></div>
+<div class="tabcontent" style="display: block; text-align: center;"><h1>Tyemi Terminal</h1><p>Choose a tab to start</p></div>
 
+<!-- Offline Compiler -->
+<div id="offline" class="tabcontent">
+    <h1>Offline Compiler</h1>
+    <h3>Follow the instructions below</h3>
+    <br>
+    <ul>
+        <li>Enter app code (from Tyemi store) in the text field.</li>
+        <li>Press the "compile" button.</li>
+        <li>Open a new tab in safari.</li>
+        <li>Paste in the address bar.</li>
+        <li>Share > add to home screen.</li>
+    </ul><br>
+    <div style="width:100%">
+    <input id="codeinput" type="text" placeholder="Tyemi app code" style="width:100%;border:none;text-align:center;"><br><br>
+    <button onclick="install();" style="padding:1%;font-size:2vw;width:100%;border:none;">Compile</button>
+    </div>
+</div>
+
+<!-- Logic -->
+<div id="logic" style="transform: scale(0); overflow: hidden;">
+    <iframe id="autodate" style="display: none;" src="https://tyemidev.github.io/tyemiterminal/app.html"></iframe>
+    <input id="content"></input>
+</div>
 </body>
 </html>

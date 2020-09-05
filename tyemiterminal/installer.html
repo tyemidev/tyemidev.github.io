@@ -6,7 +6,6 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
 <link rel="stylesheet" type="text/css" href="../styles/tyemi.css"/>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
 function install(){
    var w, autodate, enapp, data;
@@ -16,12 +15,7 @@ function install(){
    autodate = ifrm.contentWindow.document.getElementsByTagName('html')[0].outerHTML;
 
     setTimeout(() => {
-       /*// Open and write
-       w = window.open('', '_blank');
-       w.document.write(autodate.innerHTML);
-       // Close
-       w.document.close();*/
-
+      // Make URI and copy
        enapp = 'data:text/html;base64,'+btoa(autodate);
        document.getElementById("content").value = enapp
        copy();
