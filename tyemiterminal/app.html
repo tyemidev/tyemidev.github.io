@@ -1768,7 +1768,7 @@ function install(){
         var fixdate = "<!DOCTYPE html>"+autodate
 
         // Make URI and copy
-        enapp = 'data:text/html;base64,'+btoa(fixdate);
+        enapp = 'data:text/html;base64,'+btoa(unescape(encodeURIComponent(fixdate)));
         document.getElementById("content").value = enapp
         copy();
 
