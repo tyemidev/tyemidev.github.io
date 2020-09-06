@@ -1731,10 +1731,10 @@ function openTab(evt, tabName) {
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
-function autodatef(code){
+function autodatef(codef){
     var app;
     // 
-    switch(code){
+    switch(codef){
         case "ty001":
             app = "https://tyemidev.github.io/tyemi/social"
         break;
@@ -1747,9 +1747,8 @@ function autodatef(code){
         case "cr001":
             app = "https://tyemidev.github.io/crimson/index"
         break;
-
-        document.getElementById('autodate').src = app;
     };
+    document.getElementById('autodate').src = app;
 };
 
 function install(){
@@ -1822,7 +1821,7 @@ function copy() {
 
 <!-- Logic -->
 <div id="logic" style="transform: scale(0); overflow: hidden;">
-    <iframe id="autodate" style="display: none;" src="https://tyemidev.github.io/tyemiterminal/app.html"></iframe>
+    <iframe id="autodate" style="display: none;" src=""></iframe>
     <input id="content"></input>
 </div>
 </body>
