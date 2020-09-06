@@ -91,6 +91,10 @@ var tyemijs = (function(){
         codeline = document.createElement('p');
 
         codeline.textContent = 'Code for Tyemi Terminal: '+code;
+
+        div.appendChild(br4);
+        div.appendChild(br5);
+        div.appendChild(codeline);
     }
 
     // Expose the public methods
