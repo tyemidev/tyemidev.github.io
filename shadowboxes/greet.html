@@ -79,7 +79,7 @@ function lightsoff(){
     stylesheet.href = "../styles/shadow.css";
     body.setAttribute('class', '')
 
-    blacksheet.setAttribute('style', 'visibility:visible;opacity:1;transition:visibility 2000ms, opacity 2000ms ease;');
+    blacksheet.setAttribute('style', 'visibility:visible;opacity:1;transition:visibility 1000ms, opacity 1000ms ease;');
 
     // Wait, then reveal
     setTimeout(() => {
@@ -98,7 +98,7 @@ function installer(){
 
 <div id="blacksheet" class="blacksheet" style="visibility:hidden;opacity:0;transition:visibility 100ms, opacity 100ms ease;"></div>
 
-<h1 style="font-size: 5vw;">Shadowboxes</h1>
+<h1 style="font-size: 5vw;"><span class="flicker">S</span>hadowboxes</h1>
 <h1 id="header">A new way to share.</h1><br><br>
 <button id="button" style="width: 100%; font-size: 3vw;" onclick="lightsoff();">Turn off the lights</button>
 
