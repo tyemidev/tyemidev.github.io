@@ -69,22 +69,3 @@
     right: 45px;
     font-size: 60px;
   }
-
-    /* easteregg */
-    .overlay a .easteregg {
-        color: rgba(0,0,0, 0.9);
-      }
-      
-      .easteregg:hover, .easteregg:focus {
-        color: rgba(10,10,10, 0.9);;
-      }
-  
-  @media screen and (max-height: 450px) {
-    .overlay {overflow-y: auto;}
-    .overlay a {font-size: 20px}
-    .overlay .closebtn {
-    font-size: 40px;
-    top: 15px;
-    right: 35px;
-    }
-  }

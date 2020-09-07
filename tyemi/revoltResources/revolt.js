@@ -50,8 +50,12 @@ function openTab(evt, tabName) {
     
 }
 
-function nyan(){
-    document.getElementById('nyan').play()
+function adressupdate(){
+    var adressbar, frame;
+    adressbar = document.forms["adressbar"]["bar"].value;
+    frame = document.getElementById('iframe');
+
+    frame.src = adressbar;
 }
 
 
