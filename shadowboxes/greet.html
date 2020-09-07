@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Shadowboxes</title>
+
+<!-- Meta -->
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="apple-touch-icon-precomposed" href="data:image/png;base64,">
+<link id="stylesheet" rel="stylesheet" href="">
+
+<!-- Styles -->
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+body{text-align: center;}
+
+.introanim html{
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.introanim {
+    background-color: #143c53;
+    font-family: 'Share Tech Mono';
+    color: #22ffa7;
+}
+
+.introanim button {
+    font-family: 'Share Tech Mono';
+    background-color: #5a676b;
+    color: #42ffd3;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+}
+
+.blacksheet{
+    position: fixed; /* Sit on top of the page content */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #171717;
+    opacity: 1;
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+}
+*:focus {
+    outline: none;
+}
+</style>
+
+<!-- Scripts -->
+<script>
+function lightsoff(){
+    // Declare variables
+    var blacksheet, header, button, stylesheet, body;
+
+    // Grab elements
+    blacksheet = document.getElementById('blacksheet');
+    header = document.getElementById('header');
+    button = document.getElementById('button');
+    stylesheet = document.getElementById('stylesheet');
+    body = document.getElementsByTagName('body')[0];
+
+
+    // Blacksheets cover
+    blacksheet.style.visibility = 'visible';
+    blacksheet.style.opacity = '1';
+
+    setTimeout(() => {
+    ///// Hidden by blacksheet, modify stuff.
+    header.innerText = "Dark, isn't it?";
+    button.innerText = "Proceed to install"
+    button.setAttribute('onclick',"installer();");
+    stylesheet.href = "../styles/shadow.css";
+    body.setAttribute('class', '')
+
+    blacksheet.setAttribute('style', 'visibility:visible;opacity:1;transition:visibility 2000ms, opacity 2000ms ease;');
+
+    // Wait, then reveal
+    setTimeout(() => {
+        blacksheet.style.opacity = "0"
+        blacksheet.style.visibility = "hidden"
+    }, 900);
+    }, 100);
+}
+function installer(){
+    window.location.href = './app.html'
+}
+</script>
+
+</head>
+<body class="introanim">
+
+<div id="blacksheet" class="blacksheet" style="visibility:hidden;opacity:0;transition:visibility 100ms, opacity 100ms ease;"></div>
+
+<h1 style="font-size: 5vw;">Shadowboxes</h1>
+<h1 id="header">A new way to share.</h1><br><br>
+<button id="button" style="width: 100%; font-size: 3vw;" onclick="lightsoff();">Turn off the lights</button>
+
+</body>
+</html>
