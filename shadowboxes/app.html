@@ -17,6 +17,7 @@
 </style>
 
 <!-- Scripts -->
+<script src="./easy.qrcode.min.js"></script>
 <script>
 function openNav(){document.getElementById("Nav").style.height="100%"}function closeNav(){document.getElementById("Nav").style.height="0%"}function openTab(a,c){var b,d;d=document.getElementsByClassName("tabcontent");for(b=0;b<d.length;b++){d[b].style.display="none"}document.getElementById(c).style.display="block";closeNav()};
 </script>
@@ -28,15 +29,15 @@ function openNav(){document.getElementById("Nav").style.height="100%"}function c
 <div id="Nav" class="overlay">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <div class="overlay-content">
-      <a href="javascript:void(0)" onclick="openTab(event, 'webnav')">Navigator</a>
+      <a href="javascript:void(0)" onclick="openTab(event, 'urlbox')">URL > Shadowbox</a>
     </div>
 </div>
 
 <!-- Greet -->
-<div class="tabcontent" style="display: block;text-align: center;">
-    <h1 style="font-size: 5vw;"><span class="flicker">S</span>hadowboxes</h1>
-    <h1>Open the menu to start.</h1>
-</div>
+<div class="tabcontent" style="display: block;text-align: center;"><h1 style="font-size: 5vw;"><span class="flicker">S</span>hadowboxes</h1><h1>Open the menu to start.</h1></div>
+
+<!-- URL to Shadowbox -->
+<div id="urlbox" class="tabcontent"><h1>URL to Shad<span class="flicker">o</span>wbox</h1></div>
 
 </body>
 </html>
