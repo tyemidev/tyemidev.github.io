@@ -1,0 +1,80 @@
+/*
+
+    TYEMI CUBE
+
+*/
+
+/* Normal tyemi style */
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');html{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}body{background-color:#143c53;font-family:'Share Tech Mono';color:#22ffa7}a{color:#42ffd3}input{font-family:'Share Tech Mono';color:#42ffd3;background-color:#5a676b}button{font-family:'Share Tech Mono';background-color:#5a676b;color:#42ffd3;text-align:center;text-decoration:none;display:block}code{background-color:ivory}.tab{overflow:hidden;background-color:#f1f1f1}.tab button{font-family:'Share Tech Mono';background-color:inherit;color:#5a676b;float:left;border:0;outline:0;cursor:pointer;padding:14px 16px;transition:.3s}.tab button:hover{background-color:#ddd}.tab button.active{background-color:#5a676b;color:#42ffd3}.tabcontent{display:none;padding:6px 12px}
+
+/* Native feel */
+body{
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+
+    -webkit-tap-highlight-color: transparent;
+
+    -webkit-touch-callout: none;
+}
+
+/* 
+    Screeen sections 
+*/
+.appscreen{
+    position: fixed;
+    display: inline-block;
+    padding-left: 2vw;
+}
+.infscreen{
+    border-radius: 10px;
+    display: inline-block;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    background-color: rgba(0, 0, 0, 0.1);
+
+}
+
+/* 
+    Rounded Boxes 
+
+    spesifications:
+    - only use .small RBs in the .appscreen .rbrow s
+    - only usew .medium and .large RBs in the .infscreen .infrow s
+*/
+.rbrow{/* Used in .appscreen div to seperate rows */
+    width: 100%;
+}
+
+.rb {
+    position: initial;
+    text-align: center;
+    display: inline-block;
+    
+    border: 0.2vw solid;
+    border-radius: 10px;
+    margin: 0.25vw;
+    width:0;
+    height:0;
+    cursor: pointer;
+
+    background-repeat: no-repeat;
+}
+.small{
+    width: 3vw;
+    height: 3vw;
+    background-repeat: no-repeat;
+    background-size: 3.1vw 3.1vw;
+}
+.medium{
+    width: 9.3vw;
+    height: 9.3vw;
+    background-repeat: no-repeat;
+    background-size: 9.4vw 9.4vw;  
+}
+.large{
+    width: 20vw;
+    height: 10vw;
+    background-repeat: no-repeat;
+    background-size: 20.1vw 10.1vw;
+}

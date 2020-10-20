@@ -1,0 +1,156 @@
+<html><!---------------------------------><head>
+
+    <title>Tyemi</title>
+    
+    <link rel="stylesheet" type="text/css" href="../styles/tyemi.css">
+    
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    
+    <script type="text/javascript" src="https://slashsite.github.io/superwibr/js/tabs.js"></script>
+    <script type="text/javascript" src="../tyemi.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+      $(function(){
+        $("#library").load("tyemiapp/library.html");
+      });
+    </script>
+    <script>
+    function load(){
+      //list items
+      tyemijs.createListTitle('list', 'Tyemi Tools');
+      tyemijs.createListButton('list', 'Tyemi Terminal', 'lib', 'tyterminal')
+    
+      tyemijs.createListTitle('list', 'Tyemi Originals'); 
+      tyemijs.createListButton('list', 'Tyemi - Social', 'lib', 'tysocial');
+      tyemijs.createListButton('list', 'Tyemi - Disunity (Discord)', 'lib', 'disunity');
+      tyemijs.createListButton('list', 'Tyemi - Snoo (Reddit)', 'lib', 'snoo');
+      tyemijs.createListButton('list', 'Tyemi - Revolt', 'lib', 'revolt');
+      tyemijs.createListButton('list', 'Tyemi - Shadowboxes', 'lib', 'shadowbox');
+    
+      tyemijs.createListTitle('list', 'CRIMSON');
+      tyemijs.createListButton('list', 'CRIMSON Engine ', 'lib', 'crimson');
+    
+    
+      //app items
+      tyemijs.createAppPage('tyterminal', 'Tyemi Terminal', 'A tool that lets you compile our PWAs into offline versions.', 'lib', 'https://tyemidev.github.io/tyemiterminal/app');
+      
+    
+      tyemijs.createAppPage('tysocial', 'Tyemi Social', 'A collection of buttons that open different social services.', 'lib', 'https://tyemidev.github.io/tyemi/social', 'ty001');
+      tyemijs.createAppPage('disunity', 'Tyemi Disunity', 'A PWA version of Discord for the ones (like us) who prefer the website version.', 'lib', 'https://tyemidev.github.io/tyemi/disunityResources/disunity', 'ty001');
+      tyemijs.createAppPage('snoo', 'Tyemi Snoo', 'A PWA version of Reddit for the ones (like us) who prefer the website version.', 'lib', 'https://tyemidev.github.io/tyemi/snoo', 'ty003');
+      tyemijs.createAppPage('revolt', 'Tyemi Revolt', 'A PWA single tab web browser.', 'lib', 'https://tyemidev.github.io/tyemi/revoltResources/revolt', 'ty004');
+      tyemijs.createAppPage('shadowbox', 'Tyemi Shadowboxes', 'A PWA that lets you make QR codes that contain just about anything.', 'lib', 'https://tyemidev.github.io/shadowboxes/greet', 'ty005');
+    
+    
+      tyemijs.createAppPage('crimson', 'CRIMSON', 'A PWA containing all the wacky stuff CRIMSON creates, including a browser... made in the very language browsers read; HTML.', 'lib', 'https://tyemidev.github.io/crimson/index', 'cr001');
+    }
+    </script>
+    </head>
+    <!--------------------------------->
+    <body onload="setTimeout(load, 100);">
+    <!-- Tab links -->
+    <div class="tab">
+        <!-- Left aligned -->
+        <button class="tablinks active" onclick="openTab(event, 'home')">Home</button>
+        <button class="tablinks" onclick="openTab(event, 'library')">Library</button>
+    </div>
+    
+    <div class="tabcontent" id="home" style="display: block; text-align: center;">
+      <h1>Tyemi</h1>
+      <h3>"It's pronounced tie-emee!"</h3>
+      <br><br>
+      <p>Use the Library to install PWAs.</p><br><br>
+    </div>
+    
+    <div class="tabcontent" id="library">
+    
+    
+    
+    <style>
+    #searchbar {
+      width: 90vw;
+      font-size: 16px; /* Increase font-size */
+      padding: 12px 20px 12px 40px; /* Add some padding */
+      border: 1px solid #ddd; /* Add a grey border */
+      margin-bottom: 12px; /* Add some space below the input */
+      margin-top: 12px;
+    }
+    
+    #list {
+      /* Remove default list styling */
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    #list li button {
+      width: 100%;
+      border: 1px solid #ddd; /* Add a border to all links */
+      margin-top: -1px; /* Prevent double borders */
+      background-color: #f6f6f6; /* Grey background color */
+      padding: 12px; /* Add some padding */
+      text-decoration: none; /* Remove default text underline */
+      font-size: 1.125rem; /* Increase the font-size */
+      color: black; /* Add a black text color */
+      display: block; /* Make it into a block element to fill the whole list */
+    }
+    
+    #list li button:hover:not(.header) {
+      background-color: #eee; /* Add a hover effect to all links, except for headers */
+    }
+    
+    #list h1{
+        text-align: center;
+        font-size: 2rem;
+        margin-top: 2.5rem;
+        margin-bottom: 1rem;
+    }
+    </style>
+    
+    <script>
+      function search() {
+      // Declare variables
+      var input, filter, ul, li, a, i, txtValue;
+      input = document.getElementById('searchbar');
+      filter = input.value.toUpperCase();
+      ul = document.getElementById("list");
+      li = ul.getElementsByTagName('li');
+    
+      // Loop through all list items, and hide those who don't match the search query
+      for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("button")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          li[i].style.display = "";
+        } else {
+          li[i].style.display = "none";
+        }
+      }
+    }
+    </script>
+    
+    
+    
+    
+    <div id="lib">
+    <div style="text-align: center;"><div style="display:inline-block"><input type="text" id="searchbar" onkeyup="search()" placeholder="Search.."></div></div>
+    <ul id="list"><h1>Tyemi Tools</h1><li><button onclick="switcher(lib, tyterminal);">Tyemi Terminal</button></li><h1>Tyemi Originals</h1><li><button onclick="switcher(lib, tysocial);">Tyemi - Social</button></li><li><button onclick="switcher(lib, disunity);">Tyemi - Disunity (Discord)</button></li><li><button onclick="switcher(lib, snoo);">Tyemi - Snoo (Reddit)</button></li><li><button onclick="switcher(lib, revolt);">Tyemi - Revolt</button></li><li><button onclick="switcher(lib, shadowbox);">Tyemi - Shadowboxes</button></li><h1>CRIMSON</h1><li><button onclick="switcher(lib, crimson);">CRIMSON Engine </button></li></ul>
+    </div>
+    
+    <!-- Tools -->
+    <div id="tyterminal" style="display:none;"><button onclick="switcher(tyterminal, lib);">Back</button><h1>Tyemi Terminal</h1><h3>A tool that lets you compile our PWAs into offline versions.</h3><br><br><button style="font-size:100%;" onclick="tyemiopen(https://tyemidev.github.io/tyemiterminal/app);">Install</button><br><br><p>Code for Tyemi Terminal: undefined</p></div>
+    
+    <!-- Tyemi -->
+    <div id="tysocial" style="display:none;"><button onclick="switcher(tysocial, lib);">Back</button><h1>Tyemi Social</h1><h3>A collection of buttons that open different social services.</h3><br><br><button style="font-size:100%;" onclick="tyemiopen(https://tyemidev.github.io/tyemi/social);">Install</button><br><br><p>Code for Tyemi Terminal: ty001</p></div>
+    <div id="disunity" style="display:none;"><button onclick="switcher(disunity, lib);">Back</button><h1>Tyemi Disunity</h1><h3>A PWA version of Discord for the ones (like us) who prefer the website version.</h3><br><br><button style="font-size:100%;" onclick="tyemiopen(https://tyemidev.github.io/tyemi/disunityResources/disunity);">Install</button><br><br><p>Code for Tyemi Terminal: ty001</p></div>
+    <div id="snoo" style="display:none;"><button onclick="switcher(snoo, lib);">Back</button><h1>Tyemi Snoo</h1><h3>A PWA version of Reddit for the ones (like us) who prefer the website version.</h3><br><br><button style="font-size:100%;" onclick="tyemiopen(https://tyemidev.github.io/tyemi/snoo);">Install</button><br><br><p>Code for Tyemi Terminal: ty003</p></div>
+    <div id="revolt" style="display:none;"><button onclick="switcher(revolt, lib);">Back</button><h1>Tyemi Revolt</h1><h3>A PWA single tab web browser.</h3><br><br><button style="font-size:100%;" onclick="tyemiopen(https://tyemidev.github.io/tyemi/revoltResources/revolt);">Install</button><br><br><p>Code for Tyemi Terminal: ty004</p></div>
+    <div id="shadowbox" style="display:none;"><button onclick="switcher(shadowbox, lib);">Back</button><h1>Tyemi Shadowboxes</h1><h3>A PWA that lets you make QR codes that contain just about anything.</h3><br><br><button style="font-size:100%;" onclick="tyemiopen(https://tyemidev.github.io/shadowboxes/greet);">Install</button><br><br><p>Code for Tyemi Terminal: ty005</p></div>
+    
+    <!-- CRIMSON -->
+    <div id="crimson" style="display:none;"><button onclick="switcher(crimson, lib);">Back</button><h1>CRIMSON</h1><h3>A PWA containing all the wacky stuff CRIMSON creates, including a browser... made in the very language browsers read; HTML.</h3><br><br><button style="font-size:100%;" onclick="tyemiopen(https://tyemidev.github.io/crimson/index);">Install</button><br><br><p>Code for Tyemi Terminal: cr001</p></div>
+    
+    
+    </div>
+    </body></html>
