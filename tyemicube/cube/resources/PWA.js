@@ -25,12 +25,16 @@ var CUBEPWA = (function(){
     // Methods
     //
 
-    methods.call = function(name){
+    methods.get = function(name){
         if(PWA[name]){
             return PWA[name];
         }else{
             return false;
         }
+    }
+
+    methods.display = function(){
+        
     }
 
     // Expose the public methods
