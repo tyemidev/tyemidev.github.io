@@ -1693,24 +1693,32 @@ RU5ErkJggg==" />
 
         <script src="resources/PWA.js"></script>
         <script src="resources/apputil.js"></script>
+
+        <script>
+            // Handling Hashes
+            window.onload = function(){
+                var hashParams = window.location.hash.substr(1).split('&'); // substr(1) to remove the `#`
+                for(var i = 0; i < hashParams.length; i++){
+                    var p = hashParams[i].split('=');
+                    document.getElementById(p[0]).setAttribute("src", decodeURIComponent(p[1]));
+                }
+            }
+        </script>
+
     </head>
     <body style="margin:0;">
-        <div id="logic">
-            <form>
-                <input id="app" name="app" type="text" />
-            </form>
-        </div>
 
         <div class="navbar">
             <a href="./index.html">&#9664; Back to home</a>
         </div>
           
         <div class="main">
-            <iframe id="iframe"
-            width="100%" height="96%"
+            <iframe id="app"
+            width="100%" height="95%"
             src="http://example.com"
             frameborder="0" allowfullscreen=""
             style="position:absolute; left: 0;">
         </div> 
+
     </body>
 </html>

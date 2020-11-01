@@ -6,7 +6,7 @@
     top: 0; /* Position the navbar at the top of the page */
     left:0;
     width: 100%; /* Full width */
-    height: 5%;
+    height: 5vh;
     z-index: 5;
   }
   
@@ -16,8 +16,10 @@
     display: block;
     color: #f2f2f2;
     text-align: center;
-    padding: 0.7291666666666666vw 0.8333333333333334vw;
+    padding: 0.7vw 0.8vw;
     text-decoration: none;
+    height: 100%;
+    transition: 0.3s;
   }
   
   /* Change background on mouse-over */
@@ -28,5 +30,5 @@
   
   /* Main content */
   .main {
-    margin-top: 1.5625vw; /* Add a top margin to avoid content overlay */
+    margin-top: 5vh; /* Add a top margin to avoid content overlay */
   }
