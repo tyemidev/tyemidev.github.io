@@ -33,7 +33,7 @@ var CUBEPWA = (function(){
         }
     }
 
-    methods.display = function(){
+    methods.open = function(){
         
     }
 
